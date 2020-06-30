@@ -15,13 +15,18 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
+    public enum Gurkirat_OperationType{PLUS,MINUS,TIMES,DIVIDE};
+    
+    ArithmeticBase(Gurkirat_OperationType op){
+        operation= op;
+    }
  public double x,y;
     double calculate(double x, double y) 
-        {
+    {
         Scanner sc =new Scanner(System.in);
-        System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+      //  System.out.println("Enter arithmetic operation to Perform: ");
+       // String s= sc.next();
+        switch (Gurkirat_OperationType.operation) 
         {
             case "PLUS":
                 return x + y;
